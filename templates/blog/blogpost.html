@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Blog-P
+{% endblock title %}
+{% block blogactive %}
+active
+{% endblock blogactive %}
+
+
+{% block body %}
+    <div class="container my-3">
+        <h1 class='m-0 p-0'>{{ post.title }}</h1>
+        <small class='text-muted'>By {{ post.author }} on {{ post.datetime|date:'d F,Y' }}</small>
+        <p class="my-2 text-secondary">{{ post.content }}</p>
+    </div>
+{% endblock body %}
+
